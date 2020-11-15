@@ -49,8 +49,8 @@ def lightNumber(pins,List_of_number):
         if List_of_number[i]==1:
             GPIO.output(pins[i], List_of_number[i]) 
 def num2dac(pins,j): #8
-    a=decToBinList(j)
-    lightNumber(pins,a)
+    f=decToBinList(j)
+    lightNumber(pins,f)
 def adc():
     c=0
     b=255
