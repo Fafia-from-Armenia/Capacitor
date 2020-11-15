@@ -57,12 +57,11 @@ def adc():
     j=int((c+b)/2)
     while True:
         num2dac(D,j)
-        time.sleep(0.01)
+        time.sleep(1.5)
         if b-c==2 or j == 0:
             Voltage=int(((j*3.3)/256)*100)/100
             print("Digital value: ", j , ", Analog Value: ", Voltage, "V")
             return j
-            break
         elif GPIO.input(4)==1:
             c=j
             j=int((c+b)/2)

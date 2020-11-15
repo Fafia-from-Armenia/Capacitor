@@ -31,13 +31,17 @@ def Let_it_dark(pins):
         GPIO.output(pins[k], 0)
      
 def decToBinList(number):
-    c=bin(number)[2:] 
-    c=c[::-1] 
-    s=[0, 0, 0, 0, 0, 0, 0, 0 ] 
-    for k in range (len(c)):
-        s[k]=int(c[k])        
-    s.reverse()
-    return s
+    if number < 0 or number > 255:
+        a = "введите натуральное число в интервале (0; 255)"
+    else:
+        a = [0, 0, 0, 0, 0, 0, 0, 0]
+        x = 0
+        while number > 0:
+            a[x] = number % 2
+            number = number // 2
+            x+=1
+        a.reverse()
+    return a
 
 def lightNumber(pins,List_of_number):
     Let_it_dark(pins)
