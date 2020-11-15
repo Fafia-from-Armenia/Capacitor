@@ -93,7 +93,7 @@ try:
         measure.append(adc())
         listV.append((adc()*3.3)/256)
         time.sleep(0.01)
-    plt.plot(listV, 'r-')
+    plt.plot(listV, 'y--')
     plt.show()
     np.savetxt('data.txt', listV, fmt='%d') #7
 
@@ -108,7 +108,7 @@ try:
     X =  [dT, dV]
     np.savetxt('settings.txt', X, fmt='%f') 
 
-    plt.plot(listT,listV, 'r-')#10
+    plt.plot(listT,listV, 'y--')#10
     plt.title('График зависимости напряжения на конденсаторе от времени')
     plt.xlabel('Время, с')
     plt.ylabel('Напряжение, В')

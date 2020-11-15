@@ -13,8 +13,8 @@ GPIO.setup(6, GPIO.OUT)
 GPIO.setup(5, GPIO.OUT)
 GPIO.setup(11, GPIO.OUT)
 GPIO.setup(9, GPIO.OUT)
-GPIO.setup(10, GPIO.OUT)
-GPIO.setup(17, GPIO.OUT)
+GPIO.setup(10, GPIO.OUT) # Как дела? Скоро новый год!
+GPIO.setup(17, GPIO.OUT)# jjjjjjjjkhlhbl
 GPIO.setup(4, GPIO.IN)
 
 
